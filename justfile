@@ -1,14 +1,8 @@
 default:
     @just --list
 
-run:
-    uv run python main.py
-
-ddgs *args:
-    uv run duckduckgo.py {{args}}
-
-hs-with-ddgs:
-    uv run hs_with_ddgs.py
+bot:
+    uv run python -m bot
 
 lint:
     uv run ruff check
